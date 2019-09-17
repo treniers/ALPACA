@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 12.125" name="AlpacaDB">
+  <DataContextMoniker Name="/AlpacaDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="129da921-d6ea-487f-b315-c8765ccb3fd6" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AlpacaDBDataContext/Contract" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14fd0838-2b7d-4893-a799-fd783ee9b543" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a285ed5-421a-44fd-b22f-04e1bbe28525" absoluteBounds="0.75, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AlpacaDBDataContext/Counterparty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00d43363-df5f-4492-b2f8-f0edc4c8e5df" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8190857c-8455-4173-8fa3-ca3ffeebbd6d" absoluteBounds="0.75, 6.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/AlpacaDBDataContext/Counterparties_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a14dc8dc-9530-4bde-93d6-81fc03d2731c" absoluteBounds="0.765, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="774c3920-c31d-4685-9e2b-f030cd5fdb59" absoluteBounds="6.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/AlpacaDBDataContext/Counterparties_RoleType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30a9462f-1901-4b90-82f6-ace404156f5d" absoluteBounds="6.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41f48768-1423-4c06-bbed-35746d93e7e1" absoluteBounds="3.5, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/AlpacaDBDataContext/Counterparties_Status" />
+      <nestedChildShapes>
+        <elementListCompartment Id="168ad30c-c86f-4fa1-b91b-5d7e2bf8e25d" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0e1eb74-03d8-4ba5-93c1-281ce6802345" absoluteBounds="3.5, 1, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/AlpacaDBDataContext/Country" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88141539-d079-4e12-91a9-6e136ec4a498" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="86fbadc6-f114-4c5e-9117-017e83b03f60" absoluteBounds="0.75, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/AlpacaDBDataContext/Currency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f19df3d6-f8b7-4b13-b7ba-ff161851517c" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b315290e-ee92-40ee-b194-9319b6344b9e" absoluteBounds="3.75, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/AlpacaDBDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac6c3ac7-5be4-43b4-b3cf-dc318abdc9ec" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef80c160-dafb-4ad9-acaa-d7344c798ba8" absoluteBounds="6.75, 5.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/AlpacaDBDataContext/MetaDataCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="582425f9-735d-429f-9d5b-3b41b29d0bc2" absoluteBounds="6.765, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="624ac8fe-8483-4da1-ae5f-1faaba9e9765" absoluteBounds="6.75, 8.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/AlpacaDBDataContext/MetaDataCategoriesListValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8bb551f-599c-47bc-b423-579b5f46143a" absoluteBounds="6.765, 9.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f929be8-8362-4c00-8a68-46e88a7f6712" absoluteBounds="9.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/AlpacaDBDataContext/MetaDataConfigPerRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36fffda0-0be3-40dd-8668-9e89be5145fd" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37728579-ab72-4b8c-a9eb-21b4ae7296d4" absoluteBounds="0.75, 9.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AlpacaDBDataContext/MetaDataValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6e8922b-b0b6-4542-90a0-299d54467c18" absoluteBounds="0.765, 10.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.66429768880208); (3.5 : 4.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AlpacaDBDataContext/Counterparty/Counterparty_Counterparties_Status" />
+      <nodes>
+        <classShapeMoniker Id="7a285ed5-421a-44fd-b22f-04e1bbe28525" />
+        <classShapeMoniker Id="41f48768-1423-4c06-bbed-35746d93e7e1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.78929768880208); (3.5 : 1.78929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/AlpacaDBDataContext/Currency/Currency_Country" />
+      <nodes>
+        <classShapeMoniker Id="86fbadc6-f114-4c5e-9117-017e83b03f60" />
+        <classShapeMoniker Id="d0e1eb74-03d8-4ba5-93c1-281ce6802345" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

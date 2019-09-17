@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ALPACADB" Class="AlpacaDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=altfinvm.westeurope.cloudapp.azure.com;Initial Catalog=ALPACADB;User ID=ALTFINVMREM;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ALPACADBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Contracts" Member="Contracts">
+    <Type Name="Contract">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ContractType" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ContractSubType" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Counterparties" Member="Counterparties">
+    <Type Name="Counterparty">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectNumber" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Shortname" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Longname" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Counterparty_Counterparties_Status" Member="Counterparties_Status" ThisKey="Id" OtherKey="CounterPartyID" Type="Counterparties_Status" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Counterparties_Roles" Member="Counterparties_Roles">
+    <Type Name="Counterparties_Role">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CounterpartyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Counterparties_RoleTypes" Member="Counterparties_RoleTypes">
+    <Type Name="Counterparties_RoleType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Counterparties_Status" Member="Counterparties_Status">
+    <Type Name="Counterparties_Status">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CounterPartyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StatusCategory" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Counterparty_Counterparties_Status" Member="Counterparty" ThisKey="CounterPartyID" OtherKey="Id" Type="Counterparty" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Countries" Member="Countries">
+    <Type Name="Country">
+      <Column Name="Country_ID" Type="System.String" DbType="NVarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Country_Name" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="FocusCountry" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CurrencyUsed" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Association Name="Currency_Country" Member="Currency" ThisKey="CurrencyUsed" OtherKey="CurrencyCode" Type="Currency" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Currencies" Member="Currencies">
+    <Type Name="Currency">
+      <Column Name="CurrencyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CurrencyCode" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="X1000" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CurrencyType" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Association Name="Currency_Country" Member="Countries" ThisKey="CurrencyCode" OtherKey="CurrencyUsed" Type="Country" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmployeeFirstname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmployeeLastname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmployeeTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EmployeeRole" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MetaDataCategories" Member="MetaDataCategories">
+    <Type Name="MetaDataCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MetaDCategory" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MetaDType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MetaDataCategoriesListValues" Member="MetaDataCategoriesListValues">
+    <Type Name="MetaDataCategoriesListValue">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ListValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UsedForCatID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MetaDataConfigPerRole" Member="MetaDataConfigPerRoles">
+    <Type Name="MetaDataConfigPerRole">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MetaDCategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MetaDUniqueFlag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MetaDMaxOccurences" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MetaDMandatory" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ApliesToRoleType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MetaDataValues" Member="MetaDataValues">
+    <Type Name="MetaDataValue">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CounterpartyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MetaDValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ValidityFrom" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ValidityTo" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Period" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
